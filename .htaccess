@@ -1,0 +1,8 @@
+
+RewriteOptions inherit
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^consultancy360.co.uk$ [NC,OR]     
+RewriteCond %{HTTP_HOST} ^www.consultancy360.co.uk$      
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
